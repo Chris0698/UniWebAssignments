@@ -1,0 +1,249 @@
+/*Index only*/
+.indexWrapper {
+    /*Flexes the coloumns so they are the same size in the index*/
+    display: flex;
+    flex-direction: row;
+}
+
+/*For the search autocomplete box*/
+.search {
+    position: absolute;
+    width: 35%;
+    top: 123px;
+    left: 420px;
+}
+
+main {
+    width: 100%;
+    border:  thin solid black;
+}
+
+#indexMain {
+    width: 70%;
+}
+
+aside {
+    margin-left: 4px;
+    width: 30%;
+    float: right;
+    border:  thin solid black;
+}
+
+/*For all pages*/
+body {
+    position: relative;
+    font-weight: inherit;
+}
+
+html, body {
+    margin: 1px;
+    padding: 1px;
+    border: 1px;
+}
+
+/*For the login form placing it top right*/
+#loginForm {
+    width:30%;
+    float: right;
+    margin-right: 4px;
+}
+
+/*Make the error messages for the login red*/
+#errorMessagesLogin {
+    color: red;
+    font-size: 14px;
+    float: right;
+}
+
+/*Position the logout link in the same place as as the login form*/
+#logOutLink {
+    position: relative;
+    float: right;
+    font-size: 1.3em;
+    top: 103px;
+}
+
+#userInput, #passwordInput {
+    width: 50%;
+}
+
+
+p {
+    /*This changes all text in a paragraph tag.*/
+    font-family: arial, sans-serif, vendona;
+    /* text size chosen at 16px to make it easy to read for a wider range of people*/
+    font-size:16px;
+    color:#000000;
+    /*Padding to cushion the paragraphs from the border lines. */
+    padding-left:4px;
+}
+
+h1, h2 {
+    font-family: arial, sans-serif, vendona;
+    padding-left:4px;
+}
+
+.banner {
+    /*This is the bar which contains the navigation links */
+    width:100%;
+    top: 30px;
+    background-color: #3366ff;
+    height: 175px;
+    margin: 0 0 4px;
+}
+
+
+ul {
+    position: relative;
+    top:20px;
+    /* Moves the links onto the bar*/
+    font-size: 1.3em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+li  {
+    float: left;
+    display: block;
+}
+
+a.navLinks, a#logOutLink {
+    font-family: arial, sans-serif, vendona;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: #000000;
+}
+
+a.navLinks:hover, a#logOutLink:hover {
+    color: #ffffff;
+}
+
+#titleBarLogo {
+    width: 35%;
+    position: relative;
+    height: 100px;
+}
+
+footer {
+    border: thin solid black;
+    margin-top: 4px;
+    position: relative;
+    float: left;
+    /*This keeps the footer at the bottom of the page*/
+    background-color:#3366ff;
+    width: 100%;
+}
+
+/*Select book list*/
+.item {
+    display: flex;
+    flex-direction: row;
+    border-bottom: thin solid black;
+}
+
+.bookTitle, .bookTitleHeader {
+    font-family: arial, sans-serif, vendona;
+    width: 40%;
+}
+
+.bookYear, .bookYearHeader {
+    font-family: arial, sans-serif, vendona;
+    width: 15%;
+}
+
+.catDesc, .catDescHeader {
+    font-family: arial, sans-serif, vendona;
+    width: 30%;
+}
+
+.bookPrice, .bookPriceHeader {
+    font-family: arial, sans-serif, vendona;
+    width: 15%;
+}
+
+.bookTitleLinks {
+    /*This changes all text in a paragraph tag.*/
+    font-family: arial, sans-serif, vendona;
+    /* text size chosen at 16px to make it easy to read for a wider range of people*/
+    font-size:16px;
+    padding-left:4px;
+    /*Padding to cushion the paragraphs from the border lines. */
+}
+
+/*Make the coloumn headers bold*/
+.bookTitleHeader, .bookYearHeader, .catDescHeader, .bookPriceHeader {
+    font-weight: bold;
+}
+
+span {
+    margin: 4px 2px 4px 4px;
+    /*Creates vertical spacing between the books */
+   /* Creates horizontal spacing between the coloumns */
+}
+
+
+@media screen and (max-width: 960px) {
+    .bookTitle, .bookYear,.catDesc ,.bookPrice, .item {
+        display: block;
+        width: 96%; /*Not 100% because it causes a vertical scroll bar */
+        padding-left: 4px;
+        padding-right: 4px;
+        text-align: center;
+    }
+    .bookTitle {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .bookTitleHeader, .bookYearHeader, .catDescHeader, .bookPriceHeader {
+        display: none;
+    }
+}
+
+/*Edit Book form and login form */
+label {
+    font-family: arial, sans-serif, vendona;
+    display: block;
+    margin-bottom: 1em;
+    text-align: right;
+    position: relative;
+    padding: 0.25em 80% 0.25em 0;
+}
+
+label > input, label> select {
+    font-family: arial, sans-serif, vendona;
+    position: absolute;
+    left: 25%;
+    top: 0.25em;
+    /*A width 60% was choosen so the book with the longest title could be entirely seen. In this case the book
+     with the longest title is:
+     The Definitive Guide to Project Management: The fast track to getting the job done on time and on budget, 2nd edition 2008 */
+    width: 60%;
+}
+
+/*The select boxes looked a bit off so i had some extra css to make then match the input boxes it overrides current width*/
+label > select {
+    width: 60.4%;
+    height: 22px; /*Makes the selects have same height as the input boxes */
+}
+
+#submitButton {
+    font-family: arial, sans-serif, vendona;
+    margin: 4px 0 4px 4px; /*Move the submit button away from the main border*/
+}
+
+legend {
+    font-family: arial, sans-serif, vendona;
+}
+
+/*Error message for the edit book form*/
+#errorMessages {
+    color: red;
+}
+
+
+
+
+

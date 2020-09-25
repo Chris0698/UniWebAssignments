@@ -1,0 +1,7 @@
+Thu Oct 19 23:30:04 BST 2017 
+exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET
+                        bookTitle = 'A GUIDE TO THE PROJECT MANAGEMENT BODY' at line 1' in /home/unn_w16005124/public_html/_secondYear/assigment/editBookScript.php:136
+Stack trace:
+#0 /home/unn_w16005124/public_html/_secondYear/assigment/editBookScript.php(136): PDOStatement->execute(Array)
+#1 /home/unn_w16005124/public_html/_secondYear/assigment/editBookScript.php(26): process_form(Array)
+#2 {main}

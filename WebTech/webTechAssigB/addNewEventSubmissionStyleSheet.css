@@ -1,0 +1,189 @@
+body {
+	position: relative;
+	/*Set to relative so main content right border would stay in line with the navigation bar*/
+}
+
+ul {
+	position: absolute;
+	font-family: arial, sans-serif, vendona;
+	/* Different fonts are for OS compatibility. If arial is not installed then san-serif will be used.*/
+	list-style-type: none;
+	/* Removes bullet points from links.*/
+	font-size: 1.3em;
+	top: 73px;
+	/*Top moves links onto the navigation header.*/
+}
+
+li  {
+	float: left;
+	/* This turns the li tags into a horizontal position instead of a vertical bar.*/
+}
+
+a.navi {
+	/* This will only effect the links that have the class "navi". This is so the other links are unaffected.*/
+	font-family: arial, sans-serif, vendona;
+	color:black;
+	text-decoration: none;
+	font-size: 1.3em;
+	margin: 14px 16px;
+	/*This adds a space between the links and the title logos*/
+	display: block;
+}
+
+a.navi:visited {
+	/* This will only effect the links that have the class "navi" and once the link to the page has been clicked on. This is so the other links are unaffected.*/
+	color:black;
+	text-decoration: none;
+	display: block;
+	font-size: 1.3em;
+	margin: 14px 16px;
+}
+
+a.navi:hover {
+	/*This would happen when a mouse is hover over the main navigation links*/
+	color:black;
+	background-color:#99c2ff;
+	font-family: arial, sans-serif, vendona;
+	text-decoration: none;
+	font-size: 1.3em;
+	/*Adds spacing between the links to make it more "touch friendly"*/
+	margin: 14px 16px;
+}
+
+.title_logo {
+	float:left;
+	/*This floats the logo with the class centre to the left of the page. */
+	position: absolute;
+	height: 100px;	
+}
+
+p {
+	/*This changes all text in a paragraph tag.*/
+	font-family: arial, sans-serif, vendona;
+	/* text size chosen at 16px to make it easy to read for a wider range of people*/
+	font-size:16px;
+	color:#000000;
+	padding-left:4px;
+	/*Padding to cushion the paragraphs from the border lines. */
+	position: relative;
+}
+
+
+header {
+	/*This is the bar which contains the navigation links */
+	width:100%;
+	top: 30px;
+	background-color: #3366ff;
+	height: 140px;
+	margin: 0 0 4px;
+}
+
+
+h1 {
+	font-family: arial, sans-serif, vendona;
+	padding-left:4px;	
+}
+
+
+
+.title_head {
+	text-decoration: none;
+	color:#000000;
+}
+
+main {
+	border: thin solid black;
+	float: left;
+	width: 100%;
+		
+}
+
+.title_logo_Small{
+	display: none;
+	float:left;
+	/*This floats the logo with the class centre to the left of the page. */
+	position: absolute;
+	height: 100px;
+	max-width: 100%;
+}
+
+footer {
+	border: thin solid black;
+	margin-top: 4px;
+	position: relative;
+	float: left;
+	/*This keeps the footer at the bottom of the page*/
+	background-color:#3366ff;
+}
+
+.catImg {
+	/*All images have the same class so they all appear in the same location */
+	position: relative;
+	float: right;
+	margin-bottom: 10px;
+	margin-right: 90px;
+
+}
+
+article {
+	width: 60%; /*To stop the text overlapping the image*/
+}
+
+footer {
+	border: thin solid black;
+	margin-top: 4px;
+	position: relative;
+	float: left;
+	/*This keeps the footer at the bottom of the page*/
+	background-color:#3366ff;
+	width: 100%;
+}
+
+/* Media query for screens width decrease - 803px to 451px*/
+@media screen and (max-width: 782px) {
+	header {
+		height: 200px;
+	}
+}
+
+/* Media query for screens width decrease  - 470px to 361px*/
+@media screen and (max-width: 470px) {
+	header {
+		height: 320px;
+	}
+	li {
+		display: inline;
+		float: inherit;
+		text-align: center;
+
+	}
+	ul {
+		width: 89%; /*The width was orginaly around 50%, increasing the width moves the links to around the centre*/
+	}
+}
+
+/* media screen query for replacing the title logo with a smaller one*/
+@media screen and (max-width: 673px){
+	.title_logo_Small {
+		display: block;
+	}
+	.title_logo {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.catImg {
+		float: left;
+		height: auto;
+		max-width: 99%;
+		/*Height and max-width will allow the image to scale down with the screen width */
+		padding-bottom: 4px;
+		padding-left: 4px;
+		margin-right: 10px;
+	}
+	article {
+		float: left; /*I added this because when the screen resizes the text jumps upto the top right of the image. This will keep it underneath. */
+		width: 100%;
+	}
+}
